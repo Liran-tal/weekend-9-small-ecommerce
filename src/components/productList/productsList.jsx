@@ -12,7 +12,7 @@ function displayItems(props) {
 	return (
 		props.data.map((item) => {
 			return (
-				<div className="four wide column">
+				<div key={item.id} className="four wide column">
 					<div className="ui card">
 						<div className="image">
 							<img src={item.image} />
@@ -37,6 +37,7 @@ function displayItems(props) {
 						<button 
 							className="ui teal primary button" 
 							value="purchase" 
+							id={item.id}
 							onClick={props.onClick}
 						>
 							Purchase

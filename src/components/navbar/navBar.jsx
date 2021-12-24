@@ -14,9 +14,9 @@ export default function NavBar(props) {
 			<Link to={"/about"} className="item">
 				ABOUT US
 			</Link>
-			<Link to={"/purchase"} className="item">
+			<Link to={"/cart"} className="item">
 				<i className="shopping bag icon"></i>
-				<span>{props.bagCount}</span>
+				<span>{props.numItemsInBag}</span>
 			</Link>
 		</div>
 	)
