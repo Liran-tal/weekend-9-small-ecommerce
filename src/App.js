@@ -17,7 +17,6 @@ export default class App extends React.Component {
 
   async componentDidMount () {
     const { data } = await Api.get('');
-    console.log(data);
     this.setState({data: data});
   }
 
@@ -32,7 +31,6 @@ export default class App extends React.Component {
   }
 
   render () {
-    console.log(this.state);
     return (
       <div className="App">
         Small Ecommerce

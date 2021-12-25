@@ -1,10 +1,9 @@
 
 
 export default function Cart({data, itemsIds}) {
-	console.log("data: ", data);
-	console.log("itemsIds: ", itemsIds);
+	// TODO: add check if itemsIds is empty and if so, show "cart empty" screen and a return button.
+	// TODO: add / buy / delete  buttons
 	const items = getItems(data, itemsIds);
-	console.log(items);
 	const sumPrice = getSumPrice(items);
 
 	return (
@@ -56,7 +55,6 @@ function getItems(data, itemsIds) {
 }
 
 function getSumPrice(items) {
-	console.log(typeof(items[0].price))
 	return items.reduce((sum ,item) => {
 		return sum += +item.price;
 	}, 0)
